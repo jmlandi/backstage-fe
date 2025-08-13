@@ -36,19 +36,18 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
+      <div className="relative z-10 mx-auto max-w-4xl px-4 text-center md:opacity-5 hover:opacity-100 transition-all">
         <h1 className="mb-6 text-5xl font-bold leading-tight lg:text-7xl">
-          Criamos <span className="color-backstage-orange">Experiências</span>
-          <br /> Musicais Inesquecíveis
+           <span className="color-backstage-orange">Entretenimento Premium</span> Ao Vivo
         </h1>
         <p className="mx-auto mb-8 max-w-xl text-lg opacity-90">
           Somos a Backstage Productions, uma produtora especializada em eventos musicais que conecta artistas e público através de experiências únicas e memoráveis.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="#agenda" className="rounded-full bg-backstage-orange px-6 py-3 font-semibold text-white transition hover:bg-[#c21e27]">
+          <a href="#agenda" className="rounded-full bg-[#df2930] border-1 border-[#df2930] px-6 py-3 font-semibold text-white transition hover:bg-black">
             Ver Próximos Shows
           </a>
-          <a href="#sobre" className="rounded-full border-2 border-white/30 px-6 py-3 font-semibold text-white transition hover:bg-white/10">
+          <a href="#sobre" className="rounded-full border-2 border-white/30 px-6 py-3 font-semibold text-white transition bg-none hover:bg-white/10">
             Conheça Nossa História
           </a>
         </div>
