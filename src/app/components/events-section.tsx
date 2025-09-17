@@ -50,7 +50,7 @@ const events: EventItem[] = [
 
 export default function EventsSection() {
   return (
-    <section id="agenda" className="bg-backstage-orange py-20 text-white">
+    <section id="shows" className="bg-backstage-orange py-20 text-white">
       <div className="container mx-auto max-w-5xl px-4">
         <header className="mb-12 text-center">
           <h2 className="mb-2 text-3xl font-bold">Próximos Eventos</h2>

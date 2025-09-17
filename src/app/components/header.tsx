@@ -15,11 +15,11 @@ export default function Header() {
   }, [open]);
 
   const links = [
-    { href: "#", label: "Início" },
-    { href: "#agenda", label: "Agenda" },
-    { href: "#artistas", label: "Artistas" },
-    { href: "#sobre", label: "Sobre" },
-    { href: "#contato", label: "Contato" },
+    // { href: "#", label: "início" },
+    { href: "#shows", label: "shows" },
+    { href: "#booking", label: "booking" },
+    { href: "#bio", label: "bio" },
+    { href: "#contato", label: "contato" },
   ];
 
   return (

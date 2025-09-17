@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section id="sobre" className="bg-backstage-dark-gray py-20 text-white">
+    <section id="bio" className="bg-backstage-dark-gray py-20 text-white">
       <div className="container mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 md:grid-cols-2 md:gap-16">
         {/* Text */}
         <div>
