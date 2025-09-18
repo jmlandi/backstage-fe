@@ -7,7 +7,6 @@ on:
     branches: [main]
 
 jobs:
-
   install-lint-format-build-app:
     runs-on: ubuntu-latest
 
