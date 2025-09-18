@@ -1,23 +1,23 @@
-"use client";
-import { useState } from "react";
-import { MapPin, Phone, Mail, type LucideIcon } from "lucide-react";
+'use client';
+import { useState } from 'react';
+import { MapPin, Phone, Mail, type LucideIcon } from 'lucide-react';
 
 export default function ContactSection() {
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("loading");
+    setStatus('loading');
 
     const formData = new FormData(e.currentTarget);
-    console.log("Form submitted:", Object.fromEntries(formData.entries()));
+    console.log('Form submitted:', Object.fromEntries(formData.entries()));
 
     // TODO: integrate with API / email service
     await new Promise((r) => setTimeout(r, 1200));
 
-    setStatus("success");
+    setStatus('success');
     e.currentTarget.reset();
-    setTimeout(() => setStatus("idle"), 5000);
+    setTimeout(() => setStatus('idle'), 5000);
   }
 
   return (
@@ -25,9 +25,12 @@ export default function ContactSection() {
       <div className="container mx-auto max-w-5xl px-4">
         <header className="mb-12 text-center">
           <h2 className="mb-2 text-3xl font-bold">
-            Vamos Criar Algo <span className="text-backstage-orange">Incrível</span> Juntos
+            Vamos Criar Algo{' '}
+            <span className="text-backstage-orange">Incrível</span> Juntos
           </h2>
-          <p className="opacity-90">Entre em contato e vamos transformar sua ideia em realidade</p>
+          <p className="opacity-90">
+            Entre em contato e vamos transformar sua ideia em realidade
+          </p>
         </header>
 
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
@@ -36,10 +39,18 @@ export default function ContactSection() {
             <ContactItem
               icon={MapPin}
               title="Endereço"
-              text={"Rua dos Artistas, 456\nVila Madalena - São Paulo/SP"}
+              text={'Rua dos Artistas, 456\nVila Madalena - São Paulo/SP'}
             />
-            <ContactItem icon={Phone} title="Telefone" text="+55 (11) 9 9999-7777" />
-            <ContactItem icon={Mail} title="Email" text="contato@backstageproductions.com.br" />
+            <ContactItem
+              icon={Phone}
+              title="Telefone"
+              text="+55 (11) 9 9999-7777"
+            />
+            <ContactItem
+              icon={Mail}
+              title="Email"
+              text="contato@backstageproductions.com.br"
+            />
           </div>
 
           {/* Form */}
@@ -72,14 +83,14 @@ export default function ContactSection() {
             />
             <button
               type="submit"
-              disabled={status === "loading"}
+              disabled={status === 'loading'}
               className="rounded-full bg-[#DF2930] px-6 py-3 font-semibold text-white transition-all ease-out hover:cursor-pointer hover:bg-white hover:text-[#DF2930] disabled:opacity-50"
             >
-              {status === "loading"
-                ? "Enviando..."
-                : status === "success"
-                ? "Mensagem enviada!"
-                : "Enviar Mensagem"}
+              {status === 'loading'
+                ? 'Enviando...'
+                : status === 'success'
+                  ? 'Mensagem enviada!'
+                  : 'Enviar Mensagem'}
             </button>
           </form>
         </div>

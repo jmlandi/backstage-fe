@@ -1,6 +1,6 @@
-"use client";
-import { useEffect, useState } from "react";
-import Image from "next/image";
+'use client';
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -8,26 +8,32 @@ export default function Header() {
   // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (open) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     }
   }, [open]);
 
   const links = [
-    // { href: "#", label: "início" },
-    { href: "#shows", label: "shows" },
-    { href: "#booking", label: "booking" },
-    { href: "#bio", label: "bio" },
-    { href: "#contato", label: "contato" },
+    { href: '#', label: 'início' },
+    { href: '#shows', label: 'shows' },
+    { href: '#booking', label: 'booking' },
+    { href: '#bio', label: 'bio' },
+    { href: '#contato', label: 'contato' },
   ];
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[999] transition-all md:opacity-5 hover:opacity-100 bg-black/60 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-[999] transition-all md:opacity-50 hover:opacity-100 bg-black/60 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8 lg:px-12">
         {/* Logo */}
         <a href="#" aria-label="Backstage Productions">
-          <Image src="/backstage-logo.webp" alt="Backstage Productions Logo" width={135} height={45} priority />
+          <Image
+            src="/backstage-logo.webp"
+            alt="Backstage Productions Logo"
+            width={135}
+            height={45}
+            priority
+          />
         </a>
 
         {/* Desktop nav */}
@@ -54,11 +60,13 @@ export default function Header() {
           aria-label="Toggle menu"
         >
           <span
-            className={`h-0.5 w-6 bg-white transition-transform ${open ? "translate-y-[7px] rotate-45" : ""}`}
+            className={`h-0.5 w-6 bg-white transition-transform ${open ? 'translate-y-[7px] rotate-45' : ''}`}
           />
-          <span className={`h-0.5 w-6 bg-white transition-opacity ${open ? "opacity-0" : ""}`} />
           <span
-            className={`h-0.5 w-6 bg-white transition-transform ${open ? "-translate-y-[7px] -rotate-45" : ""}`}
+            className={`h-0.5 w-6 bg-white transition-opacity ${open ? 'opacity-0' : ''}`}
+          />
+          <span
+            className={`h-0.5 w-6 bg-white transition-transform ${open ? '-translate-y-[7px] -rotate-45' : ''}`}
           />
         </button>
       </div>
