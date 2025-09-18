@@ -7,7 +7,8 @@ on:
     branches: [main]
 
 jobs:
-  test:
+
+  install-lint-format-build-app:
     runs-on: ubuntu-latest
 
     steps:
@@ -30,6 +31,3 @@ jobs:
 
       - name: Build app
         run: npm run build
-
-      - name: Start app
-        run: npm start
