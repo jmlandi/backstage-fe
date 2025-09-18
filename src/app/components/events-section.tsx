@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 type EventItem = {
   date: string; // ISO yyyymmdd for sorting if needed
@@ -14,37 +14,37 @@ type EventItem = {
 
 const events: EventItem[] = [
   {
-    date: "20250726",
-    day: "26",
-    month: "JUL",
-    image: "/images/djonga-novo.jpg",
-    title: "Djonga - Governador Valadares",
-    location: "Parque de Exposição - Governador Valadares/MG",
-    time: "21:00 - 03:00",
-    price: "A partir de R$ 70,00",
-    link: "https://shotgun.live/pt-br/web/events/djonga-governadorvaladares",
+    date: '20250726',
+    day: '26',
+    month: 'JUL',
+    image: '/images/djonga-novo.jpg',
+    title: 'Djonga - Governador Valadares',
+    location: 'Parque de Exposição - Governador Valadares/MG',
+    time: '21:00 - 03:00',
+    price: 'A partir de R$ 70,00',
+    link: 'https://shotgun.live/pt-br/web/events/djonga-governadorvaladares',
   },
   {
-    date: "20250725",
-    day: "25",
-    month: "JUL",
-    image: "/images/nando-reis.jpg",
-    title: "Nando Reis - Turnê \"Nando Hits\"",
-    location: "Santos Convention Center - Santos/SP",
-    time: "19:30 - 23:59",
-    price: "A partir de R$ 120,00",
-    link: "https://shotgun.live/pt-br/web/events/nando-reis-santos",
+    date: '20250725',
+    day: '25',
+    month: 'JUL',
+    image: '/images/nando-reis.jpg',
+    title: 'Nando Reis - Turnê "Nando Hits"',
+    location: 'Santos Convention Center - Santos/SP',
+    time: '19:30 - 23:59',
+    price: 'A partir de R$ 120,00',
+    link: 'https://shotgun.live/pt-br/web/events/nando-reis-santos',
   },
   {
-    date: "20250801",
-    day: "01",
-    month: "AGO",
-    image: "/images/djonga-variacao.jpg",
-    title: "Djonga - Belém",
-    location: "Espaço Náutico Marine Club - Belém/PA",
-    time: "20:00 - 02:00",
-    price: "A partir de R$ 70,00",
-    link: "https://shotgun.live/pt-br/web/events/djonga-belem",
+    date: '20250801',
+    day: '01',
+    month: 'AGO',
+    image: '/images/djonga-variacao.jpg',
+    title: 'Djonga - Belém',
+    location: 'Espaço Náutico Marine Club - Belém/PA',
+    time: '20:00 - 02:00',
+    price: 'A partir de R$ 70,00',
+    link: 'https://shotgun.live/pt-br/web/events/djonga-belem',
   },
 ];
 
@@ -54,12 +54,17 @@ export default function EventsSection() {
       <div className="container mx-auto max-w-5xl px-4">
         <header className="mb-12 text-center">
           <h2 className="mb-2 text-3xl font-bold">Próximos Eventos</h2>
-          <p className="opacity-90">Confira nossa agenda de shows e eventos imperdíveis</p>
+          <p className="opacity-90">
+            Confira nossa agenda de shows e eventos imperdíveis
+          </p>
         </header>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {events.map((event) => (
-            <div key={event.title} className="relative overflow-hidden rounded-2xl bg-backstage-light-gray transition ease-out hover:-translate-y-2">
+            <div
+              key={event.title}
+              className="relative overflow-hidden rounded-2xl bg-backstage-light-gray transition ease-out hover:-translate-y-2"
+            >
               {/* Date badge */}
               <div className="absolute left-4 top-4 rounded-xl bg-backstage-orange px-3 py-1 text-center text-sm font-semibold">
                 <span className="block text-lg leading-none">{event.day}</span>
@@ -77,16 +82,27 @@ export default function EventsSection() {
               </div>
               {/* Content */}
               <div className="p-6">
-                <h3 className="pb-2 font-black text-white border-b border-white/20">{event.title}</h3>
+                <h3 className="pb-2 font-black text-white border-b border-white/20">
+                  {event.title}
+                </h3>
                 <div className="pt-2 mb-6 space-y-1 text-sm text-white/80">
                   <p>
-                    <strong className="font-black text-[#DF2930]">Local:</strong> {event.location}
+                    <strong className="font-black text-[#DF2930]">
+                      Local:
+                    </strong>{' '}
+                    {event.location}
                   </p>
                   <p>
-                    <strong className="font-black text-[#DF2930]">Horário:</strong> {event.time}
+                    <strong className="font-black text-[#DF2930]">
+                      Horário:
+                    </strong>{' '}
+                    {event.time}
                   </p>
                   <p>
-                    <strong className="font-black text-[#DF2930]">Ingressos:</strong> {event.price}
+                    <strong className="font-black text-[#DF2930]">
+                      Ingressos:
+                    </strong>{' '}
+                    {event.price}
                   </p>
                 </div>
                 <a

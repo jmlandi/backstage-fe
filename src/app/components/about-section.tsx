@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { Check } from "lucide-react";
+import Image from 'next/image';
+import { Check } from 'lucide-react';
 
 export default function AboutSection() {
   return (
@@ -8,13 +8,19 @@ export default function AboutSection() {
         {/* Text */}
         <div>
           <h2 className="mb-6 text-3xl font-bold">
-            Criando <span className="color-backstage-orange">Momentos</span> Únicos
+            Criando <span className="color-backstage-orange">Momentos</span>{' '}
+            Únicos
           </h2>
           <p className="mb-4 opacity-90">
-            A Backstage Productions nasceu da paixão pela música e pela criação de experiências que conectam pessoas. Há mais de 15 anos, trabalhamos incansavelmente para transformar ideias em eventos memoráveis.
+            A Backstage Productions nasceu da paixão pela música e pela criação
+            de experiências que conectam pessoas. Há mais de 15 anos,
+            trabalhamos incansavelmente para transformar ideias em eventos
+            memoráveis.
           </p>
           <p className="mb-8 opacity-90">
-            Nossa equipe especializada cuida de cada detalhe, desde a concepção até a execução, garantindo que cada evento seja uma experiência única e inesquecível para artistas e público.
+            Nossa equipe especializada cuida de cada detalhe, desde a concepção
+            até a execução, garantindo que cada evento seja uma experiência
+            única e inesquecível para artistas e público.
           </p>
           <ul className="space-y-4">
             <li className="flex items-center gap-3">

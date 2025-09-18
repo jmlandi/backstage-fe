@@ -1,12 +1,12 @@
-"use client";
-import { useEffect, useRef } from "react";
-import { Briefcase, Calendar, Users, Star } from "lucide-react"; // Example icons
+'use client';
+import { useEffect, useRef } from 'react';
+import { Briefcase, Calendar, Users, Star } from 'lucide-react'; // Example icons
 
 const stats = [
-  { icon: Briefcase, value: 15, suffix: "+", label: "Anos de experiência" },
-  { icon: Calendar, value: 500, suffix: "+", label: "Eventos realizados" },
-  { icon: Users, value: 1, suffix: "M+", label: "Pessoas impactadas" },
-  { icon: Star, value: 98, suffix: "%", label: "Satisfação dos clientes" },
+  { icon: Briefcase, value: 15, suffix: '+', label: 'Anos de experiência' },
+  { icon: Calendar, value: 500, suffix: '+', label: 'Eventos realizados' },
+  { icon: Users, value: 1, suffix: 'M+', label: 'Pessoas impactadas' },
+  { icon: Star, value: 98, suffix: '%', label: 'Satisfação dos clientes' },
 ] as const;
 
 export default function StatsSection() {
@@ -18,10 +18,12 @@ export default function StatsSection() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const elements = Array.from(entry.target.querySelectorAll("[data-counter]"));
+            const elements = Array.from(
+              entry.target.querySelectorAll('[data-counter]')
+            );
             elements.forEach((el) => {
-              const target = parseInt(el.getAttribute("data-counter") || "0");
-              const suffix = el.getAttribute("data-suffix") || "";
+              const target = parseInt(el.getAttribute('data-counter') || '0');
+              const suffix = el.getAttribute('data-suffix') || '';
               let current = 0;
               const increment = Math.max(target / 100, 1);
               const timer = setInterval(() => {
@@ -56,7 +58,11 @@ export default function StatsSection() {
                 <stat.icon size={32} color="#DF2930" />
               </span>
             </div>
-            <div className="mb-2 text-4xl font-bold color-backstage-orange" data-counter={stat.value} data-suffix={stat.suffix}>
+            <div
+              className="mb-2 text-4xl font-bold color-backstage-orange"
+              data-counter={stat.value}
+              data-suffix={stat.suffix}
+            >
               0{stat.suffix}
             </div>
             <p className="text-white/90">{stat.label}</p>

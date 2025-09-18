@@ -6,11 +6,14 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "npx prettier --write .",
+    "format:check": "npx prettier --check ."
   },
   "dependencies": {
     "lucide-react": "^0.536.0",
     "next": "15.4.5",
+    "prettier": "^3.6.2",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
