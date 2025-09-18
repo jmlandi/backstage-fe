@@ -3,9 +3,11 @@
 Welcome to the front-end of **Backstage Productions**, a Brazilian company specializing in premium artist productions and event management. This project delivers a modern, visually stunning website to showcase artists, events, and the unique value of Backstage Productions.
 
 ## About Backstage Productions
+
 Backstage Productions is dedicated to elevating the experience of artists and audiences alike, providing top-tier production services with a focus on premium design and innovation. Our website reflects our commitment to quality, creativity, and the vibrant identity of Backstage.
 
 ## Tech Stack
+
 - [Next.js](https://nextjs.org/) (v15)
 - [React](https://react.dev/) (v19)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -16,52 +18,63 @@ Backstage Productions is dedicated to elevating the experience of artists and au
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js (v18 or higher recommended)
 - npm (v9 or higher)
 
 ### Installation
+
 1. Clone the repository:
-	 ```bash
-	 git clone https://github.com/jmlandi/backstage-website.git
-	 cd backstage-website
-	 ```
+   ```bash
+   git clone https://github.com/jmlandi/backstage-website.git
+   cd backstage-website
+   ```
 2. Install dependencies:
-	 ```bash
-	 npm install
-	 ```
+   ```bash
+   npm install
+   ```
 
 ### Development
+
 To start the development server with [Turbopack](https://turbo.build/pack):
+
 ```bash
 npm run dev
 ```
+
 Visit [http://localhost:3000](http://localhost:3000) to view the site.
 
 ### Building for Production
+
 To build the optimized production version:
+
 ```bash
 npm run build
 ```
+
 To start the production server:
+
 ```bash
 npm start
 ```
 
 ### Linting & Formatting
+
 - Lint the codebase:
-	```bash
-	npm run lint
-	```
+  ```bash
+  npm run lint
+  ```
 - Format code with Prettier:
-	```bash
-	npm run format
-	```
+  ```bash
+  npm run format
+  ```
 - Check formatting:
-	```bash
-	npm run format:check
-	```
+  ```bash
+  npm run format:check
+  ```
 
 ## Project Structure
+
 - `src/app/` — Main application code (components, pages, styles)
 - `public/` — Static assets (images, icons, etc.)
 - `package.json` — Project metadata and scripts
@@ -69,6 +82,7 @@ npm start
 - `postcss.config.mjs` & `tailwind.config.js` — Styling configuration
 
 ## License
+
 This project is property of Backstage Productions only public for portfolio.
 
 ---
