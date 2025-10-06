@@ -62,7 +62,9 @@ export default function ArtistsSection() {
                 className="object-cover transition ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#cb0000d9] opacity-0 transition ease-in group-hover:opacity-100">
-                <h3 className="text-sm font-bold text-[#fdf9ed]">{artist.name.toLowerCase()}</h3>
+                <h3 className="text-sm font-bold text-[#fdf9ed]">
+                  {artist.name.toLowerCase()}
+                </h3>
               </div>
             </article>
           ))}

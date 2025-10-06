@@ -8,8 +8,7 @@ export default function AboutSection() {
         {/* Text */}
         <div>
           <h2 className="mb-6 text-3xl font-bold">
-            criando <span className="text-[#cb0000]">momentos</span>{' '}
-            únicos
+            criando <span className="text-[#cb0000]">momentos</span> únicos
           </h2>
           <p className="mb-4 opacity-90">
             A Backstage Productions nasceu da paixão pela música e pela criação

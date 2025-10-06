@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 
 export default function Footer() {
-
   const links = [
     { href: '#', label: 'início' },
     { href: '#shows', label: 'shows' },
@@ -22,15 +21,18 @@ export default function Footer() {
             height={50}
             className=""
           />
-          <p className="text-[0.75rem]">
-            entretenimento premium ao vivo
-          </p>
+          <p className="text-[0.75rem]">entretenimento premium ao vivo</p>
         </div>
         <nav className="hidden md:block">
           <ul className="display flex flex-row justify-center gap-6">
             {links.map((link) => (
               <li key={link.label}>
-                <a href={link.href} className="transition text-white hover:text-[#df2930]">{link.label}</a>
+                <a
+                  href={link.href}
+                  className="transition text-white hover:text-[#df2930]"
+                >
+                  {link.label}
+                </a>
               </li>
             ))}
           </ul>
