@@ -25,8 +25,8 @@ export default function ContactSection() {
       <div className="container mx-auto max-w-5xl px-4">
         <header className="mb-12 text-center">
           <h2 className="mb-2 text-3xl font-bold">
-            vamos criar algo{' '}
-            <span className="text-[#cb0000]">incrível</span> juntos
+            vamos criar algo <span className="text-[#cb0000]">incrível</span>{' '}
+            juntos
           </h2>
           <p className="opacity-90">
             Entre em contato e vamos transformar sua ideia em realidade

@@ -87,12 +87,8 @@ export default function EventsSection() {
                   {event.title}
                 </h3>
                 <div className="pt-3 mb-6 space-y-2 text-xs text-[#fdf9ed]/90">
-                  <p className="font-bold text-[#fdf9ed]">
-                    {event.city}
-                  </p>
-                  <p className="font-medium">
-                    {event.location}
-                  </p>
+                  <p className="font-bold text-[#fdf9ed]">{event.city}</p>
+                  <p className="font-medium">{event.location}</p>
                   <p className="font-medium">
                     {event.day} {event.month} {' às '} {event.time}
                   </p>
