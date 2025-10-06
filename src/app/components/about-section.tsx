@@ -8,8 +8,8 @@ export default function AboutSection() {
         {/* Text */}
         <div>
           <h2 className="mb-6 text-3xl font-bold">
-            Criando <span className="color-backstage-orange">Momentos</span>{' '}
-            Únicos
+            criando <span className="text-[#cb0000]">momentos</span>{' '}
+            únicos
           </h2>
           <p className="mb-4 opacity-90">
             A Backstage Productions nasceu da paixão pela música e pela criação
@@ -24,22 +24,22 @@ export default function AboutSection() {
           </p>
           <ul className="space-y-4">
             <li className="flex items-center gap-3">
-              <Check className="h-6 w-6 color-backstage-orange bg-white rounded-4xl p-1" />
+              <Check className="h-6 w-6 text-[#cb0000] bg-[#fdf9ed] rounded-xl p-1" />
               <span>Produção completa de eventos</span>
             </li>
             <li className="flex items-center gap-3">
-              <Check className="h-6 w-6 color-backstage-orange bg-white rounded-4xl p-1" />
+              <Check className="h-6 w-6 text-[#cb0000] bg-[#fdf9ed] rounded-xl p-1" />
               <span>Curadoria artística especializada</span>
             </li>
             <li className="flex items-center gap-3">
-              <Check className="h-6 w-6 color-backstage-orange bg-white rounded-4xl p-1" />
+              <Check className="h-6 w-6 text-[#cb0000] bg-[#fdf9ed] rounded-xl p-1" />
               <span>Gestão completa de artistas</span>
             </li>
           </ul>
         </div>
 
         {/* Image */}
-        <div className="overflow-hidden rounded-2xl">
+        <div className="overflow-hidden rounded-xl">
           <Image
             src="/images/backstage-hero-theater.Webp"
             alt="Equipe Backstage"

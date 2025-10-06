@@ -45,18 +45,15 @@ export default function ArtistsSection() {
       <div className="container mx-auto max-w-6xl px-4">
         <header className="mb-12 text-center">
           <h2 className="mb-2 text-3xl font-bold">
-            <span className="color-backstage-orange">Booking</span>
+            <span className="text-[#cb0000]">booking</span>
           </h2>
-          <p className="opacity-90">
-            Conheça os talentos que fazem parte da nossa história
-          </p>
         </header>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {artists.map((artist) => (
             <article
               key={artist.name}
-              className="group relative h-96 overflow-hidden rounded-2xl"
+              className="group relative h-96 overflow-hidden rounded-xl"
             >
               <Image
                 src={artist.image}
@@ -64,10 +61,8 @@ export default function ArtistsSection() {
                 fill
                 className="object-cover transition ease-out group-hover:scale-105"
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-backstage-orange-translucent opacity-0 transition ease-in group-hover:opacity-100">
-                <h3 className="mb-1 text-xl font-semibold">{artist.name}</h3>
-                <p className="text-sm opacity-90">{artist.genre}</p>
-                <p className="text-sm opacity-90">{artist.region}</p>
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#cb0000d9] opacity-0 transition ease-in group-hover:opacity-100">
+                <h3 className="text-sm font-bold text-[#fdf9ed]">{artist.name.toLowerCase()}</h3>
               </div>
             </article>
           ))}

@@ -25,8 +25,8 @@ export default function ContactSection() {
       <div className="container mx-auto max-w-5xl px-4">
         <header className="mb-12 text-center">
           <h2 className="mb-2 text-3xl font-bold">
-            Vamos Criar Algo{' '}
-            <span className="text-backstage-orange">Incrível</span> Juntos
+            vamos criar algo{' '}
+            <span className="text-[#cb0000]">incrível</span> juntos
           </h2>
           <p className="opacity-90">
             Entre em contato e vamos transformar sua ideia em realidade
@@ -57,40 +57,40 @@ export default function ContactSection() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               name="name"
-              placeholder="Seu nome"
-              className="block w-full rounded-lg border-2 border-[#333] bg-backstage-dark-gray p-4"
+              placeholder="nome"
+              className="block w-full rounded-xl border-2 border-[#333] bg-backstage-dark-gray p-4 text-[#fdf9ed]"
               required
             />
             <input
               type="email"
               name="email"
-              placeholder="Seu email"
-              className="block w-full rounded-lg border-2 border-[#333] bg-backstage-dark-gray p-4"
+              placeholder="email"
+              className="block w-full rounded-xl border-2 border-[#333] bg-backstage-dark-gray p-4 text-[#fdf9ed]"
               required
             />
             <input
               type="tel"
               name="phone"
-              placeholder="Seu telefone"
-              className="block w-full rounded-lg border-2 border-[#333] bg-backstage-dark-gray p-4"
+              placeholder="tel"
+              className="block w-full rounded-xl border-2 border-[#333] bg-backstage-dark-gray p-4 text-[#fdf9ed]"
             />
             <textarea
               name="message"
               rows={5}
-              placeholder="Sua mensagem"
-              className="block w-full rounded-lg border-2 border-[#333] bg-backstage-dark-gray p-4"
+              placeholder="msg"
+              className="block w-full rounded-xl border-2 border-[#333] bg-backstage-dark-gray p-4 text-[#fdf9ed]"
               required
             />
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="rounded-full bg-[#DF2930] px-6 py-3 font-semibold text-white transition-all ease-out hover:cursor-pointer hover:bg-white hover:text-[#DF2930] disabled:opacity-50"
+              className="w-full rounded-xl bg-[#cb0000] px-6 py-3 font-bold text-[#fdf9ed] transition-all ease-out hover:cursor-pointer hover:bg-[#fdf9ed] hover:text-[#cb0000] disabled:opacity-50 mt-2"
             >
               {status === 'loading'
-                ? 'Enviando...'
+                ? 'enviando...'
                 : status === 'success'
-                  ? 'Mensagem enviada!'
-                  : 'Enviar Mensagem'}
+                  ? 'mensagem enviada!'
+                  : 'enviar'}
             </button>
           </form>
         </div>
@@ -111,7 +111,7 @@ function ContactItem({
 }) {
   return (
     <div className="flex items-start gap-4">
-      <Icon className="mt-1 h-10 w-10 flex-shrink-0 bg-backstage-orange rounded-4xl p-2" />
+      <Icon className="mt-1 h-10 w-10 flex-shrink-0 bg-[#cb0000] rounded-xl p-2 text-[#fdf9ed]" />
       <div>
         <h3 className="font-semibold">{title}</h3>
         <p className="whitespace-pre-line opacity-90">{text}</p>

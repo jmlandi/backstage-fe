@@ -3,7 +3,7 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
+  --background: #fdf9ed;
   --foreground: #171717;
 }
 
@@ -21,15 +21,15 @@ html {
 }
 
 .color-backstage-orange {
-  color: #df2930;
+  color: #cb0000;
 }
 
 .bg-backstage-orange {
-  background: #df2930;
+  background: #cb0000;
 }
 
 .bg-backstage-orange-translucent {
-  background-color: #df292fd9;
+  background-color: #cb0000d9;
 }
 
 .color-backstage-light-gray {
