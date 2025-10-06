@@ -23,7 +23,7 @@ export default function Footer() {
             className=""
           />
           <p className="text-[0.75rem]">
-            experiência premium ao vivo
+            entretenimento premium ao vivo
           </p>
         </div>
         <nav className="hidden md:block">

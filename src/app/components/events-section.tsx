@@ -7,6 +7,7 @@ type EventItem = {
   image: string;
   title: string;
   location: string;
+  city: string;
   time: string;
   price: string;
   link: string;
@@ -16,33 +17,36 @@ const events: EventItem[] = [
   {
     date: '20250726',
     day: '26',
-    month: 'JUL',
+    month: 'julho',
     image: '/images/djonga-novo.jpg',
-    title: 'Djonga - Governador Valadares',
-    location: 'Parque de Exposição - Governador Valadares/MG',
-    time: '21:00 - 03:00',
+    title: 'djonga',
+    location: 'Parque de Exposição',
+    city: 'governador valadares',
+    time: '21h',
     price: 'A partir de R$ 70,00',
     link: 'https://shotgun.live/pt-br/web/events/djonga-governadorvaladares',
   },
   {
     date: '20250725',
     day: '25',
-    month: 'JUL',
+    month: 'julho',
     image: '/images/nando-reis.jpg',
-    title: 'Nando Reis - Turnê "Nando Hits"',
-    location: 'Santos Convention Center - Santos/SP',
-    time: '19:30 - 23:59',
+    title: 'nando reis',
+    location: 'Santos Convention Center',
+    city: 'santos',
+    time: '19h30min',
     price: 'A partir de R$ 120,00',
     link: 'https://shotgun.live/pt-br/web/events/nando-reis-santos',
   },
   {
     date: '20250801',
     day: '01',
-    month: 'AGO',
+    month: 'agosto',
     image: '/images/djonga-variacao.jpg',
-    title: 'Djonga - Belém',
-    location: 'Espaço Náutico Marine Club - Belém/PA',
-    time: '20:00 - 02:00',
+    title: 'djonga',
+    location: 'Espaço Náutico Marine Club',
+    city: 'belém',
+    time: '20h',
     price: 'A partir de R$ 70,00',
     link: 'https://shotgun.live/pt-br/web/events/djonga-belem',
   },
@@ -53,25 +57,22 @@ export default function EventsSection() {
     <section id="shows" className="bg-backstage-orange py-20 text-white">
       <div className="container mx-auto max-w-5xl px-4">
         <header className="mb-12 text-center">
-          <h2 className="mb-2 text-3xl font-bold">Próximos Eventos</h2>
-          <p className="opacity-90">
-            Confira nossa agenda de shows e eventos imperdíveis
-          </p>
+          <h2 className="mb-2 text-3xl font-bold">próximos eventos</h2>
         </header>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
           {events.map((event) => (
             <div
               key={event.title}
-              className="relative overflow-hidden rounded-2xl bg-backstage-light-gray transition ease-out hover:-translate-y-2"
+              className="relative overflow-hidden rounded-xl bg-backstage-light-gray transition ease-out hover:-translate-y-2"
             >
               {/* Date badge */}
-              <div className="absolute left-4 top-4 rounded-xl bg-backstage-orange px-3 py-1 text-center text-sm font-semibold">
+              <div className="absolute left-4 top-4 rounded-xl bg-[#cb0000] px-3 py-1 text-start text-sm font-semibold">
                 <span className="block text-lg leading-none">{event.day}</span>
                 <span className="block leading-none">{event.month}</span>
               </div>
               {/* Image */}
-              <div className="h-48 w-full overflow-hidden">
+              <div className="h-64 w-full overflow-hidden">
                 <Image
                   src={event.image}
                   alt={event.title}
@@ -82,34 +83,25 @@ export default function EventsSection() {
               </div>
               {/* Content */}
               <div className="p-6">
-                <h3 className="pb-2 font-black text-white border-b border-white/20">
+                <h3 className="pb-3 text-sm font-bold text-[#fdf9ed] border-b border-[#fdf9ed]/20">
                   {event.title}
                 </h3>
-                <div className="pt-2 mb-6 space-y-1 text-sm text-white/80">
-                  <p>
-                    <strong className="font-black text-[#DF2930]">
-                      Local:
-                    </strong>{' '}
+                <div className="pt-3 mb-6 space-y-2 text-xs text-[#fdf9ed]/90">
+                  <p className="font-bold text-[#fdf9ed]">
+                    {event.city}
+                  </p>
+                  <p className="font-medium">
                     {event.location}
                   </p>
-                  <p>
-                    <strong className="font-black text-[#DF2930]">
-                      Horário:
-                    </strong>{' '}
-                    {event.time}
-                  </p>
-                  <p>
-                    <strong className="font-black text-[#DF2930]">
-                      Ingressos:
-                    </strong>{' '}
-                    {event.price}
+                  <p className="font-medium">
+                    {event.day} {event.month} {' às '} {event.time}
                   </p>
                 </div>
                 <a
                   href={event.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block rounded-full border-2 border-[#DF2930] bg-transparent px-6 py-2 text-sm font-semibold transition ease-in-out hover:bg-white hover:text=[#DF2930] hover:text-[#DF2930]"
+                  className="inline-block rounded-xl border-2 border-[#cb0000] bg-transparent px-6 py-2 text-sm font-bold transition ease-in-out hover:bg-[#fdf9ed] hover:text-[#cb0000] mt-2"
                 >
                   INGRESSOS
                 </a>

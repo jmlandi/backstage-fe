@@ -23,7 +23,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[999] transition-all md:opacity-50 hover:opacity-100 bg-black/60 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-[999] bg-black">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8 lg:px-12">
         {/* Logo */}
         <a href="#" aria-label="Backstage Productions">
@@ -43,7 +43,7 @@ export default function Header() {
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className="transition text-white hover:text-[#df2930]"
+                  className="transition text-[#fdf9ed] hover:text-[#cb0000]"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
@@ -60,13 +60,13 @@ export default function Header() {
           aria-label="Toggle menu"
         >
           <span
-            className={`h-0.5 w-6 bg-white transition-transform ${open ? 'translate-y-[7px] rotate-45' : ''}`}
+            className={`h-0.5 w-6 bg-[#fdf9ed] transition-transform ${open ? 'translate-y-[7px] rotate-45' : ''}`}
           />
           <span
-            className={`h-0.5 w-6 bg-white transition-opacity ${open ? 'opacity-0' : ''}`}
+            className={`h-0.5 w-6 bg-[#fdf9ed] transition-opacity ${open ? 'opacity-0' : ''}`}
           />
           <span
-            className={`h-0.5 w-6 bg-white transition-transform ${open ? '-translate-y-[7px] -rotate-45' : ''}`}
+            className={`h-0.5 w-6 bg-[#fdf9ed] transition-transform ${open ? '-translate-y-[7px] -rotate-45' : ''}`}
           />
         </button>
       </div>
@@ -79,7 +79,7 @@ export default function Header() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="block w-[190px] px-5 py-2 text-center transition text-white hover:bg-white/10 border-b border-white/20"
+                  className="block w-[190px] px-5 py-2 text-center transition text-[#fdf9ed] hover:bg-[#fdf9ed]/10 border-b border-[#fdf9ed]/20"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}

@@ -1,5 +1,4 @@
 import HeroSection from './components/hero-section';
-import StatsSection from './components/stats-section';
 import EventsSection from './components/events-section';
 import ArtistsSection from './components/artists-section';
 import AboutSection from './components/about-section';
@@ -10,7 +9,6 @@ export default function Home() {
     <>
       {/* Main landing sections */}
       <HeroSection />
-      <StatsSection />
       <EventsSection />
       <ArtistsSection />
       <AboutSection />
