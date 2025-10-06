@@ -40,7 +40,7 @@ export default function Header() {
         <nav className="hidden md:block">
           <ul className="flex items-center gap-6 text-sm font-medium">
             {links.map((link) => (
-              <li key={link.href}>
+              <li key={link.label}>
                 <a
                   href={link.href}
                   className="transition text-white hover:text-[#df2930]"
